@@ -8,9 +8,9 @@ function App() {
     fetch("http://localhost:8080/doguinhos")
       .then((response) => response.json())
       .then((data) => {
-        //setRacas(data)
+        setRacas(data);
       });
-  });
+  }, []); // o [] significa que o useEffect só será executado uma vez
 
   return (
     <div className="App">
